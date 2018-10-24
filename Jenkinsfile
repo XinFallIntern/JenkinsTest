@@ -2,8 +2,10 @@ pipeline {
 	agent any
 	
 	stages('stage1'){
-		steps{
-			bat 'python print.py'
+		stage{
+			steps{
+				bat 'python print.py'
+			}
 		}
 	}
 }
