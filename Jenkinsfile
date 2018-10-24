@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	
-	stage('stage1'){
+	stages('stage1'){
 		steps{
 			bat 'python print.py'
 		}
