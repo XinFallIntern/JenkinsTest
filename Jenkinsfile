@@ -1,7 +1,6 @@
-node {
-    dir("C:/pyproject") {
-        stage('Build') {
-            bat 'python print.py'
-        }
-    }    
+node('docker') {
+    checkout scm
+    stage('Build') {
+	bat 'python print.py'
+    }
 }
