@@ -1,9 +1,8 @@
-pipeline {
-	agent any
-	
-	stages('stage1'){
-		steps{
-			bat 'python print.py'
+node('master'){
+	checkout scm
+	stage('Build'){
+		docker.inside{
+			bat 'python test.py'
 		}
 	}
 }
