@@ -4,7 +4,7 @@ pipeline {
 	stages{
 		stage('stage1'){
 			steps{
-				bat 'python print.py'
+				bat 'python test.py'
 			}
 		}
 	}
