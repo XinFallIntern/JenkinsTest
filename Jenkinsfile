@@ -1,6 +1,9 @@
-node('docker') {
-    checkout scm
-    stage('Build') {
-	bat 'python print.py'
-    }
+pipeline {
+	agent any
+	
+	stages('stage1'){
+		steps{
+			bat 'python print.py'
+		}
+	}
 }
