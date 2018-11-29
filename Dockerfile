@@ -1,3 +1,3 @@
 FROM ubuntu
 
-ENV envVar = "whatever"
+ENV myVar = "whatever"
