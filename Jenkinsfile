@@ -1,6 +1,13 @@
-node('master'){
-	checkout scm
-	stage('Build'){
-		bat 'python test.py'
+pipeline {
+	agent{
+		dockerfile true
+	}
+	stages{
+		stage('T'){
+			stpes{
+				echo "111"
+				println "$myVar"
+			}
+		}
 	}
 }
