@@ -1,15 +1,5 @@
-pipeline {
-	agent any
-	stages{
-		stage('T'){
-			agent {
-        			docker {
-          				image 'python'
-        			}
-     			}
-			steps{
-				echo "111"
-			}
-		}
+pipeline{
+	agent{
+		docker {image 'node:7-alpine'}
 	}
 }
