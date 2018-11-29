@@ -1,12 +1,13 @@
 pipeline {
-	agent{
-		dockerfile true
-	}
 	stages{
 		stage('T'){
+			agent {
+        			docker {
+          				image 'python'
+        			}
+     			}
 			steps{
 				echo "111"
-				println "$myVar"
 			}
 		}
 	}
