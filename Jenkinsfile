@@ -4,7 +4,7 @@ pipeline {
 	}
 	stages{
 		stage('T'){
-			stpes{
+			steps{
 				echo "111"
 				println "$myVar"
 			}
