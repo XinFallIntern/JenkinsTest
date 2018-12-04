@@ -1,6 +1,6 @@
 node("Docker"){
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('slaveimage').inside {
+    docker.image('hello-world').inside {
         stage('Test') {
             bat "MSBuild"
         }
