@@ -1,3 +1,1 @@
-FROM ubuntu
-
-ENV myVar = "whatever"
+FROM buildtools
