@@ -1,8 +1,10 @@
-node("Docker"){
-    /* Requires the Docker Pipeline plugin to be installed */
-   docker.image('hello-world').inside {
+pipeline {
+    agent { dockerfile true }
+    stages {
         stage('Test') {
-            sh 'node --version'
+            steps {
+                bat 'MSBuild'
+            }
         }
     }
 }
